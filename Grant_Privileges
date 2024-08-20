@@ -1,0 +1,13 @@
+GRANTING PRIVILEGES
+ 
+-- Grant SELECT and INSERT privileges on the Users table to a data entry clerk
+GRANT SELECT, INSERT ON Users TO 'data_entry_clerk';
+ 
+-- Grant SELECT, INSERT, and UPDATE privileges on the Bookings table to a booking manager
+GRANT SELECT, INSERT, UPDATE ON Bookings TO 'booking_manager';
+ 
+-- Grant SELECT, INSERT, and DELETE privileges on the Payment table to an accountant
+GRANT SELECT, INSERT, DELETE ON Payment TO 'accountant';
+ 
+-- Grant SELECT privilege on all tables to an auditor for review purposes
+GRANT SELECT ON Users, Services, Bookings, Locations, Reviews, Payment, CancellationRefund, Invoices, Notifications TO 'auditor';
