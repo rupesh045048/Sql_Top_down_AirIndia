@@ -1,13 +1,13 @@
 CREATE TABLE Users (
     UserID char PRIMARY KEY,
-    UserName VARCHAR(255),
-    Email VARCHAR(255),
+    UserName VARCHAR(30),
+    Email VARCHAR(30),
     Phone CHAR(10)
 );
 
 CREATE TABLE Services (
     ServiceID INT PRIMARY KEY,
-    ServiceName VARCHAR(255),
+    ServiceName VARCHAR(30),
     Description TEXT,
     Price DECIMAL(10, 2)
 );
@@ -17,17 +17,17 @@ CREATE TABLE Bookings (
     UserID INT,
     ServiceID INT,
     Date DATE,
-    Status VARCHAR(50),
+    Status VARCHAR(10),
     FOREIGN KEY (UserID) REFERENCES Users(UserID),
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
 );
 
 CREATE TABLE Locations (
     LocationID INT PRIMARY KEY,
-    LocationName VARCHAR(255),
-    Address VARCHAR(255),
-    City VARCHAR(100),
-    Country VARCHAR(100)
+    LocationName VARCHAR(30),
+    Address VARCHAR(100),
+    City VARCHAR(30),
+    Country VARCHAR(30)
 );
 
 CREATE TABLE Reviews (
@@ -45,7 +45,7 @@ CREATE TABLE Payment (
     BookingID INT,
     Amount DECIMAL(10, 2),
     PaymentDate DATE,
-    PaymentMethod VARCHAR(100),
+    PaymentMethod VARCHAR(50),
     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
 );
 
