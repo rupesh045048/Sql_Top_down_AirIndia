@@ -2,7 +2,7 @@ CREATE TABLE Users (
     UserID char PRIMARY KEY,
     UserName VARCHAR(255),
     Email VARCHAR(255),
-    Phone VARCHAR(20)
+    Phone CHAR(10)
 );
 
 CREATE TABLE Services (
