@@ -1,5 +1,5 @@
 CREATE TABLE Users (
-    UserID INT PRIMARY KEY,
+    UserID char PRIMARY KEY,
     UserName VARCHAR(255),
     Email VARCHAR(255),
     Phone VARCHAR(20)
@@ -50,8 +50,8 @@ CREATE TABLE Payment (
 );
 
 CREATE TABLE CancellationRefund (
-    CancellationRefundID INT PRIMARY KEY,
-    BookingID INT,
+    CancellationRefundID char PRIMARY KEY,
+    BookingID char,
     CancellationDate DATE,
     RefundAmount DECIMAL(10, 2),
     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
